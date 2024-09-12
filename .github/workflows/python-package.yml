@@ -47,3 +47,14 @@ jobs:
     - name: Test with pytest
       run: |
         python google_sheet.py
+
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Tests report
+        path: |
+          output
+          *.json
+          retention-days: 1
