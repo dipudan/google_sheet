@@ -40,6 +40,9 @@ jobs:
       run: |
         chmod u+x config.sh
         bash config.sh
+        echo "Hello1"
+        ls
+        echo "Hello2"
           
     - name: Test with pytest
       run: |
