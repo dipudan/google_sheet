@@ -7,7 +7,7 @@ from google.oauth2 import service_account
 try:
     scopes = ["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.file",
               "https://www.googleapis.com/auth/spreadsheets"]
-    secret_file = os.path.join(os.getcwd(), 'client_login.json')
+    secret_file = os.path.join(os.getcwd(), 'client.json')
 
     spreadsheet_id = os.environ.get('GOOGLE_SHEET_ID')
 
