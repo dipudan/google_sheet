@@ -17,7 +17,7 @@ try:
       "type": "service_account"
     }"""
     
-    if test_data == sheet_content:
+    if test_data != sheet_content:
         print("hello")
 
     if spreadsheet_id == '1IjdhROMebuEJvryiPsdBgsgo_CniuD-xJGaXRNUh0cA':
