@@ -17,9 +17,10 @@ try:
       "type": "service_account"
     }"""
     
-    if test_data != sheet_content:
-        print("hello")
-
+    if spreadsheet_id == '1IjdhROMebuEJvryiPsdBgsgo_CniuD-xJGaXRNUh0cA':
+        print("Sheetname same")
+    else:
+        print("Sheetname same different")
     if spreadsheet_id == '1IjdhROMebuEJvryiPsdBgsgo_CniuD-xJGaXRNUh0cA':
         range_name = 'Sheet1!A:A'
         
