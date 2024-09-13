@@ -4,6 +4,7 @@ import os
 from apiclient import discovery
 from google.oauth2 import service_account
 from jsondiff import diff
+import json
 
 try:
     scopes = ["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.file",
