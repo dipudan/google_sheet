@@ -13,7 +13,9 @@ try:
 
     spreadsheet_id = os.environ.get('GOOGLE_SHEET_ID')
     sheet_content = os.environ.get("GOOGLE_SHEET_TOKEN")
-    test_data ='{ "test" : "test" }'
+    test_data = '''{
+  "type": "service_account"
+}'''
     
     if sheet_content == test_data:
         print("Json same")
