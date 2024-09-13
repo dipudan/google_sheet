@@ -13,7 +13,12 @@ try:
 
     spreadsheet_id = os.environ.get('GOOGLE_SHEET_ID')
     sheet_content = os.environ.get("GOOGLE_SHEET_TOKEN")
-    print(sheet_content)
+    test_data = """{
+      "type": "service_account"
+    }"""
+    
+    if test_data == sheet_content:
+        print("hello")
 
     if spreadsheet_id == '1IjdhROMebuEJvryiPsdBgsgo_CniuD-xJGaXRNUh0cA':
         range_name = 'Sheet1!A:A'
