@@ -3,6 +3,7 @@ import os
 
 from apiclient import discovery
 from google.oauth2 import service_account
+from jsondiff import diff
 
 try:
     scopes = ["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.file",
@@ -10,6 +11,13 @@ try:
     secret_file = os.path.join(os.getcwd(), 'client.json')
 
     spreadsheet_id = os.environ.get('GOOGLE_SHEET_ID')
+
+    with open(os.path.join(os.getcwd(), 'client.json')) as f1, open(os.path.join(os.getcwd(), 'client_login.json')) as f2:
+    json1 = json.load(f1)
+    json2 = json.load(f2)
+
+    differences = diff(json1, json2)
+    print(differences)
 
     if spreadsheet_id == '1IjdhROMebuEJvryiPsdBgsgo_CniuD-xJGaXRNUh0cA':
         range_name = 'Sheet1!A:A'
