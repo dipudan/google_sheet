@@ -22,4 +22,5 @@ if [ -z "$ENV_VAR_NAME" ]; then
 fi
 JSON_FILE="output.json"
 echo "${ENV_VAR_NAME}" > "$JSON_FILE"
+echo "$(<output.json )"
 
